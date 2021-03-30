@@ -1,0 +1,12 @@
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background: url("../img/banner.jpg") fixed no-repeat;
+	background-size: 100%;
+	color: #fff;
+	text-align: center
+}
+
+.banner span {margin: 0}
