@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-language" content="fr-FR">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="description" content="La Brasserie des Evêques à villeneuve lès Maguelone">
+		<meta name="keywords" content="brasserie, évêque, bière, artisanal, villeneuve, maguelone">
+		<meta name="author" content="Vedis">
+		<meta name="theme-color" content="#4f3c3b">
+		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/banner.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript">
+			function calc_banner_height() {
+				var h = window.innerWidth,
+					rw = (4000 / h),
+					rh = (2250 / rw - 10);
+				return rh
+			}
+
+			window.onload = function() {
+				var header = document.querySelector("header"),
+					banner = document.querySelector(".banner");
+				banner.style.height = calc_banner_height() + "px";
+				this.onresize = function() {banner.style.height = calc_banner_height() + "px"}
+				this.onscroll = function() {
+					if (this.scrollY >= calc_banner_height()) {
+						header.style.backgroundColor = "#634b4a";
+						header.style.borderBottom = "1px solid #fff"
+					} else {
+						header.style.backgroundColor = "transparent";
+						header.style.borderBottom = "none"
+					}
+				}
+			}
+		</script>
+		<title>Accueil • La Brasserie des Evêques</title>
+	</head>
+
+	<body>
+		<header style="border-bottom: none; background-color: transparent">
+			<a href="index.html" class="logo" title="La Brasserie des Evêques"><img src="img/logo.jpg"></a>
+			<a href="javascript:void(0)" class="open_nav"></a>
+			<nav>
+				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
+				<a href="atelier.html" title="Faites votre bière"><span>FAITES VOTRE BIERE</span></a>
+				<a href="contact.html" title="Nous contacter"><span>NOUS CONTACTER</span></a>
+			</nav>
+		</header>
+
+		<section class="banner">
+			<span class="title">Brasserie des Évêques</span>
+			<span class="subtitle">Bières artisanales</span>
+		</section>
+
+		<main>
+			<span class="title">Bienvenue</span>
+			<p style="padding: 0 25px">
+				En quelques années, les pionniers du brassage maison ont su donner une âme à la bière.<br><br>
+				L'eau, le malt, le houblon sont devenus sources d'inspiration et d'expérimentations<br>
+				de brasseurs passionnés. Saveurs, arômes et robes se déclinent à l'infini.<br>
+				Les bières de terroir sont nées. Les nôtres sont maritimes.<br>
+				Nous habitons sur le littoral languedocien, près de l'île de Maguelone,<br>
+				d'où un puissant évêché a rayonné pendant mille ans.
+			</p>
+			<span class="subtitle">Notre atelier</span><br>
+			<img src="img/workshop.jpg" class="workshop">
+		</main>
+
+		<footer>
+			<div class="links">
+				<span>yannick.bonnet@free.fr</span>
+				<span>06 68 92 20 80</span>
+				<span><a href="https://www.facebook.com/BrasseriedesEveques" class="fb" title="Facebook"></a></span>
+			</div>
+			<div class="copyright">
+				© 2021 Brasserie des Evêques. Tous droits réservés.<br>
+				<span style="font-size: 12px">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
+			</div>
+		</footer>
+	</body>
+
+</html>
