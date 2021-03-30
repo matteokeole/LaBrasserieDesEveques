@@ -1,0 +1,39 @@
+/* Alvaro Condensed */
+@font-face {
+	font-family: Alvaro;
+	src: url(AlvaroCondensed.otf) format("opentype")
+}
+
+/* Bodoni Bold */
+@font-face {
+	font-family: Bodoni;
+	src: url(BodoniBold.ttf) format("truetype")
+}
+
+/* Roboto Slab Regular */
+@font-face {
+	font-family: "Roboto Slab Regular";
+	src: url(RobotoSlabRegular.ttf) format("truetype")
+}
+
+
+
+body {font-family: "Roboto Slab Regular"}
+
+nav a {font-family: Alvaro}
+
+.title,
+.subtitle {
+	font-weight: normal;
+	font-family: Bodoni
+}
+
+.title {
+	margin-bottom: 20px;
+	font-size: 60px
+}
+
+.subtitle {
+	margin: 20px 0;
+	font-size: 40px
+}
