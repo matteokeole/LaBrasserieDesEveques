@@ -55,6 +55,13 @@ main {
 
 /* media queries */
 
+@media screen and (min-width: 1401px) {
+	.card {
+		width: 400px !important;
+		height: 600px
+	}
+	.card-content {height: calc(100% - 40px) !important}
+}
 
 @media screen and (min-width: 801px) {
 	/* nav buttons hover animation */
