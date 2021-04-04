@@ -1,48 +1,33 @@
+/* footer */
+
 footer {
-	width: 100%;
-	background-color: #4f3c3b;
-	color: #fff;
+	padding: 10px;
+	position: relative;
+	border-top: 1px solid #757575;
+	background-color: #fff;
 	text-align: center
 }
 
-footer .links {
-	line-height: 40px;
-	margin-bottom: 20px;
-	padding: 10px 10px 0 10px;
-	font-size: 20px
-}
+/* useful links */
 
-.links span {
+.links {line-height: 40px}
+
+.links a {
 	display: inline-block;
 	vertical-align: top;
-	height: 40px;
 	margin-bottom: 10px;
 	padding: 0 20px
 }
 
-.links span:last-of-type {border-right: none}
-
 .fb {
-	display: inline-block;
-	width: 40px;
 	height: 40px;
-	background-image: url(../img/fb.png);
-	background-size: cover;
-	transition: 0.2s
+	background: url(../img/fb.png) no-repeat;
+	background-size: contain
 }
 
-.fb:hover {
-	-webkit-filter: brightness(0.8);
-	filter: brightness(0.8)
-}
+/* copyright section */
 
-.fb:active {
-	-webkit-filter: brightness(0.6);
-	filter: brightness(0.6);
-	transition: 0.1s
-}
-
-footer .copyright {
-	padding: 10px 0;
-	font-size: 16px
+.copyright {
+	display: block;
+	padding-top: 10px
 }

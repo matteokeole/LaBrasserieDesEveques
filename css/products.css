@@ -1,4 +1,4 @@
-.products {width: 100%}
+/* item sections */
 
 .item {
 	display: inline-block;
@@ -6,13 +6,12 @@
 	width: 300px;
 	margin: 20px;
 	padding: 20px;
-	background-color: #fff;
-	color: #000
+	background-color: #fac564
 }
 
 .photo {
-	display: block;
-	width: 100%
+	width: 100%;
+	transition-duration: 0.4s
 }
 
 .color {
@@ -28,5 +27,3 @@
 	text-align: left;
 	font-size: 18px
 }
-
-.info li {padding-top: 20px}

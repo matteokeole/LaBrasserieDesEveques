@@ -1,0 +1,94 @@
+.workshop_details {
+	width: 100%;
+	margin: 20px 0;
+	padding-top: 20px;
+	border-top: 1px solid #757575
+}
+
+.card {
+	display: inline-block;
+	vertical-align: top;
+	width: 800px;
+	margin: 20px 10px 0 10px;
+	position: relative;
+	background-color: #fac564
+}
+
+.card-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #fac564;
+	transition-duration: 0.2s
+}
+
+.card-content {
+	display: inline-block;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+	position: relative;
+	opacity: 0;
+	background-color: #fac564;
+	text-align: center;
+	transition-duration: 0.2s;
+	z-index: 1
+}
+
+.card-title:hover ~ .card-content, .card-content:hover {
+	visibility: visible;
+	opacity: 1
+}
+
+.list {
+	display: inline-block;
+	width: 400px;
+	margin-bottom: 20px;
+	text-align: left
+}
+
+.list span {
+	display: block;
+	margin-bottom: 10px;
+	text-align: center
+}
+
+.card-content p {
+	margin: 0;
+	padding: 0 20px
+}
+
+.list-large {
+	margin: 0;
+	padding-right: 20px;
+	text-align: left
+}
+
+.formula {
+	display: inline-block;
+	width: 50%
+}
+
+.interest {
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 0;
+	border-top: 1px solid #757575
+}
+
+.btn-contact {
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	outline: none;
+	border: 1px solid #000;
+	color: #000;
+	text-decoration: none;
+	transition-duration: 0.4s
+}

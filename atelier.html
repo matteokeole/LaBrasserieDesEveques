@@ -4,44 +4,114 @@
 
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="content-language" content="fr-FR">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<meta name="description" content="La Brasserie des Evêques à villeneuve lès Maguelone">
-		<meta name="keywords" content="brasserie, évêque, bière, artisanal, villeneuve, maguelone">
-		<meta name="author" content="Vedis">
-		<meta name="theme-color" content="#4f3c3b">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="La Brasserie des Evêques à Villeneuve-lès-Maguelone">
+		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
+		<meta name="copyright" content="© 2021 La Brasserie des Evêques. Tous droits réservés.">
+		<link rel="icon" type="image/png" href="img/favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<title>Faites votre bière • La Brasserie des Evêques</title>
+		<link rel="stylesheet" type="text/css" href="css/workshop.css">
+		<script type="text/javascript" src="js/animate_header.js"></script>
+		<script type="text/javascript" src="js/toggle_menu.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				animate_header();
+				this.onscroll = animate_header
+			}
+		</script>
+		<title>Notre atelier • La Brasserie des Evêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
 	<body>
 		<header>
-			<a href="index.html" class="logo" title="La Brasserie des Evêques"><img src="img/logo.jpg"></a>
-			<a href="javascript:void(0)" class="open_nav"></a>
+			<a href="index.html" class="logo extended" title="La Brasserie des Evêques"></a>
+			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
 			<nav>
 				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
-				<a href="atelier.html" title="Faites votre bière"><span>FAITES VOTRE BIERE</span></a>
-				<a href="contact.html" title="Nous contacter"><span>NOUS CONTACTER</span></a>
+				<a href="" class="active" title="Notre atelier"><span>FAITES VOTRE BIERE</span></a>
+				<a href="contact.php" title="Nous contacter"><span>NOUS CONTACTER</span></a>
 			</nav>
 		</header>
 
 		<main>
-			<span class="title">Atelier</span>
+			<span class="title">Notre atelier</span>
+			<p>
+				Faites vous-même votre bière !<br>
+				Nous proposons un atelier d'initiation au brassage.
+			</p>
+			<section class="workshop_details">
+				<div class="card program">
+					<div class="card-title">Programme</div>
+					<div class="card-content">
+						<span class="subtitle">Programme</span>
+						<div class="list" style="float: left">
+							<span><u>La théorie</u></span>
+							<ul>
+								<li>Présentation de la brasserie</li>
+								<li>Les ingrédients</li>
+								<li>Les réactions chimiques</li>
+								<li>L'hygiène</li>
+							</ul>
+						</div>
+						<div class="list" style="float: right">
+							<span><u>La pratique</u></span>
+							<ul>
+								<li>Broyage des malts</li>
+								<li>Pratique de l'empâtage</li>
+								<li>Transfert du moût et ébullition</li>
+								<li>Mise en fermentation</li>
+							</ul>
+						</div>
+						<p>Les soutirages et les conditionnements sont réalisés à une date ultérieure.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-title">Conditions</div>
+					<div class="card-content">
+						<span class="subtitle">Conditions</span>
+						<ul class="list-large">
+							<li>Réalisation d'un brassin de 30L</li>
+							<li>2 à 3 stagiaires par session</li>
+							<li>Durée de la session : 5h + 2h (3 semaines plus tard pour l'embouteillage)</li>
+							<li>Horaires : 8h - 13h le samedi (+ 2h à convenir)</li>
+							<li>La préparation et le nettoyage sont à notre charge</li>
+							<li>Les ingrédients sont fournis et les bouteilles sont consignées</li>
+							<li>Récupération des lots embouteillés 2 mois après la session</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-title">Formules</div>
+					<div class="card-content">
+						<span class="subtitle">Formules</span>
+						<div class="formula" style="float: left">
+							<span><u>Pour 2 personnes</u></span><br><br>
+							<span class="price">158€</span>
+						</div>
+						<div class="formula" style="float: right">
+							<span><u>Pour 3 personnes</u></span><br><br>
+							<span class="price">198€</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="interest">
+				<p>Vous êtes intéressé(e) ?</p>
+				<a href="contact.php" class="btn-contact">CONTACTEZ-NOUS</a>
+			</section>
 		</main>
 
 		<footer>
 			<div class="links">
-				<span>yannick.bonnet@free.fr</span>
-				<span>06 68 92 20 80</span>
-				<span><a href="https://www.facebook.com/BrasseriedesEveques" class="fb" title="Facebook"></a></span>
+				<a href="mailto:yannick.bonnet@free.fr" class="mail" title="Envoyer un mail via Gmail">yannick.bonnet@free.fr</a>
+				<a href="tel:0668922080" class="phone" title="Appeler">06 68 92 20 80</a>
+				<a href="https://www.facebook.com/BrasseriedesEveques" target="_blank" rel="noopener norefferer" class="fb" title="Facebook"></a>
 			</div>
-			<div class="copyright">
-				© 2021 Brasserie des Evêques. Tous droits réservés.<br>
-				<span style="font-size: 12px">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
-			</div>
+			<span class="copyright">© 2021 La Brasserie des Evêques. Tous droits réservés.</span>
+			<span class="creators">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
 		</footer>
 	</body>
 

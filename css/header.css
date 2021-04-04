@@ -1,45 +1,71 @@
+/* header */
+
 header {
-	display: block;
 	width: 100%;
 	height: 60px;
 	position: fixed;
-	border-bottom: 1px solid #fff;
-	background-color: #634b4a
+	background-color: #fff;
+	transition-duration: 0.2s;
+	z-index: 3
 }
 
-.logo {position: absolute}
+header.light {background-color: transparent}
 
-.logo img {
-	width: 115px;
-	height: 60px
+/* logo */
+
+.logo {
+	display: inline-block;
+	width: 37px; /* basic logo = 37px */
+	height: 60px;
+	background: url(../img/logo.png) no-repeat;
+	background-size: contain
 }
 
-.open_nav {
+.logo.extended {
+	width: 93px; /* extended logo = 93px */
+	background-image: url(../img/logo-extended.png)
+}
+
+/* menu button (only for small screens) */
+
+.menu {
 	visibility: hidden;
 	width: 60px;
 	height: 60px;
 	float: right;
-	background: url(../img/menu.svg) center no-repeat;
+	background-image: url(../img/menu.svg);
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: 30px;
 	-webkit-filter: invert(1);
-	filter: invert(1)
+	filter: invert(1);
+	transition-duration: 0.2s
 }
 
-.open_nav:hover ~ nav,
-nav:hover {
-	visibility: visible;
-	opacity: 1
+.menu.light {
+	-webkit-filter: none;
+	filter: none
 }
+
+.menu.opened {background-image: url(../img/cross.svg)}
+
+/* nav section */
 
 nav {
-	visibility: visible;
+	display: inline-block;
 	height: 60px;
 	right: 0;
 	position: absolute;
 	opacity: 1;
-	background-color: transparent;
-	transition: 0.2s
+	transition-duration: 0.2s
 }
+
+nav.opened {
+	visibility: visible;
+	opacity: 1
+}
+
+/* nav links */
 
 nav a {
 	display: inline-block;
@@ -47,35 +73,15 @@ nav a {
 	line-height: 40px;
 	margin: 10px;
 	padding: 0 20px;
-	position: relative;
-	color: #fff;
+	position: relative; /* allows hover animation */
+	color: #000;
 	text-decoration: none;
-	font-size: 30px;
-	letter-spacing: 2px;
-	transition: 0.5s
+	transition-duration: 0.4s
 }
 
-nav a:after {
-	content: "";
-	width: 0;
-	height: 100%;
-	right: 0;
-	position: absolute;
-	background-color: #fff;
-	transition: 0.5s
-}
+nav.light a {color: #fff}
 
-nav a span {
-	position: relative;
-	z-index: 1
-}
-
-nav a:hover {color: #000}
-nav a:hover:after {width: 100%}
-
-nav a:active {
-	-webkit-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	transform: scale(0.9);
-	transition: 0.1s
+nav .active {
+	background-color: #000;
+	color: #fff
 }

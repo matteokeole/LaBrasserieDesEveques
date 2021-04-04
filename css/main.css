@@ -1,47 +1,155 @@
-body {
-	margin: 0;
-	overflow-x: hidden;
-	background-color: #4f3c3b /* #4f3c3b = #634b4a with rgba(0, 0, 0, 0.2) */
+body {margin: 0}
+
+/* banner section (only index) */
+
+.banner {
+	position: relative;
+	background: url(../img/banner.jpg) fixed;
+	background-size: 100%
 }
 
-::selection {background-color: rgba(0, 0, 0, 0.2)}
+.banner-layer {
+	display: block;
+	width: 100%
+}
+
+.banner-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	color: #fff
+}
+
+/* main container (all pages) */
 
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 	padding: 100px 50px 50px 50px;
-	box-shadow: 0 -20px 40px #000;
-	background-color: #634b4a;
-	color: #fff;
+	box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.5); /* box shadow on the banner */
 	text-align: center;
 	font-size: 20px
 }
 
-.workshop {width: 50%}
+/* workshop photo (only index) */
+
+.workshop-photo {
+	width: 40%;
+	margin-top: 20px
+}
+
+/* keyframes */
+
+@keyframes fade_out {
+	from {opacity: 1}
+	to {opacity: 0}
+}
 
 /* media queries */
-@media screen and (max-width: 1000px) {.workshop {width: 65%}}
+
+
+@media screen and (min-width: 801px) {
+	/* nav buttons hover animation */
+	nav a:after {
+		content: "";
+		width: 0;
+		height: 100%;
+		right: 0;
+		position: absolute;
+		transition-duration: 0.5s
+	}
+	nav.light a:after {background-color: #fff}
+	nav a:after {background-color: #000}
+	nav a span {
+		position: relative;
+		z-index: 1
+	}
+	nav.light a:hover {color: #000}
+	nav a:hover {color: #fff}
+	nav a:hover:after {width: 100%}
+}
+
+@media screen and (max-width: 1000px) {
+	.title {font-size: 45px}
+	main > p {padding: 0 25px}
+	.workshop-photo {width: 50%}
+	.card {margin: 20px 0 0 0 !important}
+	#map {width: 100%}
+}
+
+@media screen and (max-width: 900px) {
+	.card {width: 100% !important}
+	.list {width: 100% !important}
+}
+
 @media screen and (max-width: 800px) {
-	.logo {left: calc(50% - 57.5px)}
-	.open_nav {visibility: visible}
+	.menu {visibility: visible}
 	nav {
 		visibility: hidden;
 		height: auto;
 		top: 60px;
 		opacity: 0;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 		background-color: #000
 	}
 	nav a {
 		display: block;
-		margin-bottom: 10px
+		margin-bottom: 10px;
+		color: #fff !important
 	}
-	.title {font-size: 40px !important}
-	.subtitle {font-size: 30px !important}
+	nav a:hover {
+		background-color: #fff;
+		color: #000 !important
+	}
+	.title {font-size: 35px}
+	.subtitle {font-size: 25px}
+	.links,
+	main > p,
+	.workshop_info,
+	.card,
+	.interest,
+	.cards,
+	.address,
+	.contact {font-size: 18px}
+	.workshop-photo {width: 70%}
+	.card-title {display: none !important}
+	.card-content {
+		visibility: visible !important;
+		opacity: 1 !important
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+	textarea {
+		width: 300px;
+		height: 150px
+	}
+	#map {height: 300px}
 }
-@media screen and (max-width: 700px) {.workshop {width: 100%}}
+
+@media screen and (max-width: 700px) {.workshop-photo {width: 90%}}
+
+@media screen and (max-width: 600px) {.formula {width: 100% !important}}
+
 @media screen and (max-width: 500px) {
 	main {padding: 100px 0 50px 0}
+	.banner-title {display: none}
+	.main-title {display: block}
 	.item {margin: 20px 0 !important}
+	.error {width: 90%}
+	.workshop-photo {width: 100%}
+	#map {
+		border-left: none;
+		border-right: none
+	}
 }

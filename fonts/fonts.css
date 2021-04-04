@@ -1,39 +1,127 @@
-/* Alvaro Condensed */
 @font-face {
-	font-family: Alvaro;
+	font-family: Alvaro; /* Alvaro Condensed */
 	src: url(AlvaroCondensed.otf) format("opentype")
 }
 
-/* Bodoni Bold */
 @font-face {
-	font-family: Bodoni;
+	font-family: Bodoni; /* Bodoni Bold */
 	src: url(BodoniBold.ttf) format("truetype")
 }
 
-/* Roboto Slab Regular */
 @font-face {
-	font-family: "Roboto Slab Regular";
+	font-family: "Roboto Slab"; /* Roboto Slab Regular */
 	src: url(RobotoSlabRegular.ttf) format("truetype")
 }
 
+html, body {
+	font-size: 20px;
+	font-family: "Roboto Slab"
+}
 
+/* buttons */
 
-body {font-family: "Roboto Slab Regular"}
+nav a,
+input[type="submit"],
+.btn-contact {
+	font-size: 30px;
+	font-family: Alvaro;
+	letter-spacing: 2px
+}
 
-nav a {font-family: Alvaro}
+/* buttons hover animation */
+
+input[type="submit"]:hover, .btn-contact:hover {
+	background-color: #000;
+	color: #fff
+}
+
+/* buttons active animation */
+
+nav a:active,
+input[type="submit"]:active,
+.btn-contact:active {
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	transition-duration: 0.1s
+}
+
+/* inputs & textarea */
+
+input, textarea {
+	font-size: 18px;
+	font-family: "Roboto Slab"
+}
+
+::selection {background-color: rgba(0, 0, 0, 0.2)} /* text selection */
+
+/* titles & subtitles */
 
 .title,
-.subtitle {
+.subtitle,
+.card-title,
+.price {
+	display: block;
+	margin-bottom: 20px;
 	font-weight: normal;
 	font-family: Bodoni
 }
 
-.title {
-	margin-bottom: 20px;
-	font-size: 60px
+.title {font-size: 55px}
+
+.subtitle, .card-title {font-size: 35px}
+
+.price {font-size: 25px}
+
+.banner-title .subtitle {margin-bottom: 0}
+
+.main-title {
+	display: none;
+	padding: 0 25px
 }
 
-.subtitle {
-	margin: 20px 0;
-	font-size: 40px
+.main-title .subtitle {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #757575
+}
+
+/* paragraphs */
+
+main > p {padding: 0 20%}
+
+/* list items */
+
+.info li {padding-top: 20px}
+
+.list li, .list-large li {padding-top: 2px}
+
+/* links */
+
+p a {color: #000}
+
+.mail,
+.phone {
+	color: #000;
+	text-decoration: none
+}
+
+p a:hover,
+.mail:hover,
+.phone:hover {color: #333}
+
+/* copyright section */
+
+.copyright {font-size: 16px}
+
+/* creators section */
+
+.creators {font-size: 12px}
+
+/* links hover animation */
+
+.logo:hover,
+.fb:hover {
+	-webkit-filter: brightness(1.2);
+	filter: brightness(1.2)
 }

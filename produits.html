@@ -4,36 +4,59 @@
 
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="content-language" content="fr-FR">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<meta name="description" content="La Brasserie des Evêques à villeneuve lès Maguelone">
-		<meta name="keywords" content="brasserie, évêque, bière, artisanal, villeneuve, maguelone">
-		<meta name="author" content="Vedis">
-		<meta name="theme-color" content="#4f3c3b">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="La Brasserie des Evêques à Villeneuve-lès-Maguelone">
+		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
+		<meta name="copyright" content="© 2021 La Brasserie des Evêques. Tous droits réservés.">
+		<link rel="icon" type="image/png" href="img/favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/products.css">
-		<title>Nos produits • La Brasserie des Evêques</title>
+		<script type="text/javascript" src="js/animate_header.js"></script>
+		<script type="text/javascript" src="js/toggle_menu.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("load", function() {
+				var amber = document.querySelector(".amber .photo"),
+					blond = document.querySelector(".blond .photo"),
+					brown = document.querySelector(".brown .photo");
+
+				animate_header();
+				this.onscroll = animate_header;
+
+				// init amber beer photo
+				amber.src = "img/amber-small.jpg";
+				amber.onload = function() {this.src = "img/amber.jpg"}
+
+				// init blond beer photo
+				blond.src = "img/blond-small.jpg";
+				blond.onload = function() {this.src = "img/blond.jpg"}
+
+				// init brown beer photo
+				brown.src = "img/brown-small.jpg";
+				brown.onload = function() {this.src = "img/brown.jpg"}
+			})
+		</script>
+		<title>Nos produits • La Brasserie des Evêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
 	<body>
 		<header>
-			<a href="index.html" class="logo" title="La Brasserie des Evêques"><img src="img/logo.jpg"></a>
-			<a href="javascript:void(0)" class="open_nav"></a>
+			<a href="index.html" class="logo extended" title="La Brasserie des Evêques"></a>
+			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
 			<nav>
-				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
-				<a href="atelier.html" title="Faites votre bière"><span>FAITES VOTRE BIERE</span></a>
-				<a href="contact.html" title="Nous contacter"><span>NOUS CONTACTER</span></a>
+				<a href="" class="active" title="Nos produits"><span>NOS PRODUITS</span></a>
+				<a href="atelier.html" title="Notre atelier"><span>FAITES VOTRE BIERE</span></a>
+				<a href="contact.php" title="Nous contacter"><span>NOUS CONTACTER</span></a>
 			</nav>
 		</header>
 
 		<main>
 			<span class="title">Nos bières</span>
-			<div class="products">
+			<section class="products">
 				<div class="item amber">
-					<img src="img/amber.jpg" class="photo">
+					<img class="photo">
 					<span class="subtitle color">AMBREE</span>
 					<ul class="info">
 						<li>33 cl et 75 cl</li>
@@ -47,7 +70,7 @@
 					</ul>
 				</div>
 				<div class="item blond">
-					<img src="img/blond.jpg" class="photo">
+					<img class="photo">
 					<span class="subtitle color">BLONDE</span>
 					<ul class="info">
 						<li>33 cl et 75 cl</li>
@@ -61,7 +84,7 @@
 					</ul>
 				</div>
 				<div class="item brown">
-					<img src="img/brown.jpg" class="photo">
+					<img class="photo">
 					<span class="subtitle color">BRUNE</span>
 					<ul class="info">
 						<li>33 cl et 75 cl</li>
@@ -74,19 +97,17 @@
 						<li>Arômes boisés, chocolat, épices et pointe de cannelle</li>
 					</ul>
 				</div>
-			</div>
+			</section>
 		</main>
 
 		<footer>
 			<div class="links">
-				<span>yannick.bonnet@free.fr</span>
-				<span>06 68 92 20 80</span>
-				<span><a href="https://www.facebook.com/BrasseriedesEveques" class="fb" title="Facebook"></a></span>
+				<a href="mailto:yannick.bonnet@free.fr" class="mail" title="Envoyer un mail via Gmail">yannick.bonnet@free.fr</a>
+				<a href="tel:0668922080" class="phone" title="Appeler">06 68 92 20 80</a>
+				<a href="https://www.facebook.com/BrasseriedesEveques" target="_blank" rel="noopener norefferer" class="fb" title="Facebook"></a>
 			</div>
-			<div class="copyright">
-				© 2021 Brasserie des Evêques. Tous droits réservés.<br>
-				<span style="font-size: 12px">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
-			</div>
+			<span class="copyright">© 2021 La Brasserie des Evêques. Tous droits réservés.</span>
+			<span class="creators">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
 		</footer>
 	</body>
 
