@@ -1,5 +1,3 @@
-(pense à enlever quand tu finis une tâche)
-
 Changements
 - Ajouter du parallaxe à l'image de fond dans index.html (Anouar si tu sais faire, perso jamais fait)
 - Agrandir l'adresse dans contact.php (je vois pas de laquelle il parle)
