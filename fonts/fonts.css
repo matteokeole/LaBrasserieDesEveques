@@ -67,6 +67,8 @@ input, textarea {
 	font-family: Bodoni
 }
 
+.price:last-of-type {margin-bottom: 0}
+
 .title {font-size: 55px}
 
 .subtitle, .card-title {font-size: 35px}

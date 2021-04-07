@@ -46,6 +46,28 @@ main {
 	margin-top: 20px
 }
 
+/* contact section */
+
+.interest {
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 0;
+	border-top: 1px solid #757575
+}
+
+.btn-contact {
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	outline: none;
+	border: 1px solid #000;
+	color: #000;
+	text-decoration: none;
+	transition-duration: 0.4s
+}
+
 /* keyframes */
 
 @keyframes fade_out {
@@ -63,7 +85,7 @@ main {
 	.card-content {height: calc(100% - 40px) !important}
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 901px) {
 	/* nav buttons hover animation */
 	nav a:after {
 		content: "";
@@ -95,9 +117,6 @@ main {
 @media screen and (max-width: 900px) {
 	.card {width: 100% !important}
 	.list {width: 100% !important}
-}
-
-@media screen and (max-width: 800px) {
 	.menu {visibility: visible}
 	nav {
 		visibility: hidden;
@@ -116,6 +135,9 @@ main {
 		background-color: #fff;
 		color: #000 !important
 	}
+}
+
+@media screen and (max-width: 800px) {
 	.title {font-size: 35px}
 	.subtitle {font-size: 25px}
 	.links,
@@ -144,14 +166,16 @@ main {
 	#map {height: 300px}
 }
 
-@media screen and (max-width: 700px) {.workshop-photo {width: 90%}}
+@media screen and (max-width: 700px) {
+	.banner-title {display: none}
+	.main-title {display: block}
+	.workshop-photo {width: 90%}
+}
 
 @media screen and (max-width: 600px) {.formula {width: 100% !important}}
 
 @media screen and (max-width: 500px) {
 	main {padding: 100px 0 50px 0}
-	.banner-title {display: none}
-	.main-title {display: block}
 	.item {margin: 20px 0 !important}
 	.error {width: 90%}
 	.workshop-photo {width: 100%}
