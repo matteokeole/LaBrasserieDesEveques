@@ -4,6 +4,3 @@ Changements
 - Ajouter du parallaxe à l'image de fond dans index.html (Anouar si tu sais faire, perso jamais fait)
 - Agrandir l'adresse dans contact.php (je vois pas de laquelle il parle)
 - Améliorer les polices (peut-être trouver une police bold ? bref je m'en charge)
-
-Ajouts
-- Logo choppe au dessus du titre La Brasserie des Évêques sur l'image dans index.html (j'ai ajouté l'icône beer.svg dans le dossier img, plus qu'à la mettre sur la page)

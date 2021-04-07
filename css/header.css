@@ -9,7 +9,10 @@ header {
 	z-index: 3
 }
 
-header.light {background-color: transparent}
+header.top {
+	box-shadow: none !important;
+	background-color: transparent
+}
 
 /* logo */
 
@@ -40,11 +43,6 @@ header.light {background-color: transparent}
 	-webkit-filter: invert(1);
 	filter: invert(1);
 	transition-duration: 0.2s
-}
-
-.menu.light {
-	-webkit-filter: none;
-	filter: none
 }
 
 .menu.opened {background-image: url(../img/cross.svg)}
@@ -78,8 +76,6 @@ nav a {
 	text-decoration: none;
 	transition-duration: 0.4s
 }
-
-nav.light a {color: #fff}
 
 nav .active {
 	background-color: #000;

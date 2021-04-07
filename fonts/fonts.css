@@ -13,7 +13,7 @@
 	src: url(RobotoSlabRegular.ttf) format("truetype")
 }
 
-html, body {
+body {
 	font-size: 20px;
 	font-family: "Roboto Slab"
 }
@@ -110,7 +110,9 @@ p a {color: #000}
 
 p a:hover,
 .mail:hover,
-.phone:hover {color: #333}
+.phone:hover {
+	color: #333
+}
 
 /* copyright section */
 
@@ -122,8 +124,7 @@ p a:hover,
 
 /* links hover animation */
 
-.logo:hover,
-.fb:hover {
+.logo:hover, .fb:hover {
 	-webkit-filter: brightness(1.2);
 	filter: brightness(1.2)
 }
