@@ -1,3 +1,3 @@
 # LaBrasserieDesEveques
-Site officiel de la Brasserie des Evêques à Villeneuve-lès-Maguelone.  
+Site officiel de la Brasserie des Évêques à Villeneuve-lès-Maguelone.  
 https://brasseriedeseveques.com

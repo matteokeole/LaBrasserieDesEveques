@@ -5,9 +5,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="La Brasserie des Evêques à Villeneuve-lès-Maguelone">
+		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
-		<meta name="copyright" content="© 2021 La Brasserie des Evêques. Tous droits réservés.">
+		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
 		<link rel="icon" type="image/png" href="img/favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
@@ -29,12 +29,12 @@
 				this.onscroll = animate_header
 			}
 		</script>
-		<title>Nous contacter • La Brasserie des Evêques • Villeneuve-lès-Maguelone</title>
+		<title>Nous contacter • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
 	<body>
 		<header>
-			<a href="index.html" class="logo extended" title="La Brasserie des Evêques"></a>
+			<a href="index.html" class="logo extended" title="La Brasserie des Évêques"></a>
 			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
 			<nav>
 				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
@@ -67,7 +67,7 @@
 						$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
 						$send = mail(
 							"yannick.bonnet@free.fr",
-							"La Brasserie des Evêques",
+							"La Brasserie des Évêques",
 							$msg,
 							"De " . $from);
 						if ($send) echo "<div class='error valid'><div class='content'>Votre message a bien été envoyé.</div><button class='close' onclick='close_error(this)' title='Fermer'></button></div>";
@@ -92,7 +92,7 @@
 				<a href="tel:0668922080" class="phone" title="Appeler">06 68 92 20 80</a>
 				<a href="https://www.facebook.com/BrasseriedesEveques" target="_blank" rel="noopener norefferer" class="fb" title="Facebook"></a>
 			</div>
-			<span class="copyright">© 2021 La Brasserie des Evêques. Tous droits réservés.</span>
+			<span class="copyright">© 2021 La Brasserie des Évêques. Tous droits réservés.</span>
 			<span class="creators">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
 		</footer>
 	</body>

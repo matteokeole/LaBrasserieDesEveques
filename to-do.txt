@@ -1,0 +1,23 @@
+(pense à mettre C'EST FAIT !!! quand tu finis une tâche)
+
+Par rapport aux bières
+- Saaz/Amarillo au lieu de Cascade (Mattéo)
+- Est Kent Golding/Target au lieu de Challenger (Mattéo)
+
+Alignements
+- Aligner verticalement les cases des bières dans produits.html (Mattéo)
+- Aligner verticalement le texte des sections Programme/Conditions/Formules dans atelier.html (Mattéo)
+
+Changements
+- Changer la photo dans index.html (la remplacer par quoi ?) et ajouter du parallaxe (Anouar si tu sais faire, perso j'en ai jamais codé)
+- Accent sur la majuscule d'Evêques, C'EST FAIT !!!
+- Remplacer "Participez à un stage..." par "Participez à un atelier de brassage" dans index.html
+- Mieux présenter le texte de bienvenue (sans saut de ligne, peut être fait avec du padding sur les bords si tu veux)
+- Agrandir l'adresse dans contact.php (je vois pas de laquelle il parle)
+- Améliorer les polices (peut-être trouver une police bold ? je m'en charge)
+
+Ajouts
+- Logo choppe au dessus du titre La Brasserie des Évêques sur l'image dans index.html (j'ai ajouté l'icône beer.svg dans le dossier img, plus qu'à la mettre sur la page)
+- Bouton Accueil dans la barre du haut (héhé tu vois je t'avais dit mdr, je le ferai vu que j'ai fait le reste de la nav)
+- Texte "Vente tous les jours de 18h à 19h et le samedi de 10h à 19h" dans index.html
+- Section Nous contacter sur index.html (comme tu l'as fait pour atelier.html, tu ctrl-c ctrl-v tu connais)
