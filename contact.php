@@ -78,8 +78,8 @@
 			</section>
 			<section class="maps" style="margin-bottom: 0">
 				<span class="subtitle">Nous trouver</span>
-				<span class="address">
-					3 rue des Colibris<br>
+				<span style="font-size: 120%" class="address">
+					3 rue des Colibris,<br>
 					Villeneuve-lès-Maguelone<br>
 					34750
 				</span>
