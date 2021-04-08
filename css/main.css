@@ -21,12 +21,26 @@ body {
 	width: 100%;
 	height: calc(9 * (100vw / 16) - 10px);
 	top: 0;
-	position: absolute
+	position: absolute;
+	animation: fade 1s;
+}
+
+@keyframes fade{
+	from{opacity:0;}
+	to{opacity: 1;}
+}
+
+@keyframes down{
+	from{bottom: 10px;width: 110px;}
+	to{bottom: 0;width: 100px;}
 }
 
 .beer {
 	width: 100px;
-	margin-bottom: 20px
+	position: relative;
+	margin-bottom: 20px;
+	animation: fade 2s;
+	animation: down 1s;
 }
 
 /* main container (all pages) */
