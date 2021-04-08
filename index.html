@@ -20,10 +20,12 @@
 			window.onload = function() {
 				var header = document.querySelector("header"),
 					logo = document.querySelector(".logo"),
+					banner = document.querySelector(".banner"),
 					banner_height = calc_banner_height();
 
 				this.onscroll = function() {
 					banner_height = calc_banner_height();
+					banner.style.top = (this.scrollY / 3) + "px";
 					if (this.scrollY < banner_height) {
 						// top of the page
 						header.classList.add("top");
@@ -52,8 +54,10 @@
 
 		<section class="banner">
 			<img src="img/beer.svg" class="beer">
-			<span class="title">La Brasserie des Évêques</span>
-			<span class="subtitle">Bières artisanales</span>
+			<div class="banner-title">
+				<span class="title">La Brasserie des Évêques</span>
+				<span class="subtitle">Bières artisanales</span>
+			</div>
 		</section>
 
 		<main style="padding-top: 50px">
