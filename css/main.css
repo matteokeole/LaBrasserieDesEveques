@@ -22,7 +22,7 @@ body {
 	height: calc(9 * (100vw / 16) - 10px);
 	top: 0;
 	position: absolute;
-	animation: fade 1s;
+	animation: fade 0.75s !important;
 }
 
 @keyframes fade{
@@ -30,17 +30,16 @@ body {
 	to{opacity: 1;}
 }
 
-@keyframes down{
-	from{bottom: 10px;width: 110px;}
-	to{bottom: 0;width: 100px;}
+@keyframes down_fade{
+	from{bottom: 10px;opacity:0;}
+	to{bottom: 0;opacity: 1;}
 }
 
 .beer {
 	width: 100px;
 	position: relative;
 	margin-bottom: 20px;
-	animation: fade 2s;
-	animation: down 1s;
+	animation: down_fade 1s !important;
 }
 
 /* main container (all pages) */
