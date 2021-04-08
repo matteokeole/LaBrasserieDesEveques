@@ -6,10 +6,6 @@ body {
 /* banner section (only index) */
 
 .banner {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	width: 100%;
 	height: calc(9 * (100vw / 16) - 10px);
 	position: relative;
@@ -17,12 +13,21 @@ body {
 	background-size: 100%
 }
 
+.banner-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(9 * (100vw / 16) - 10px);
+	top: 0;
+	position: absolute
+}
+
 .beer {
 	width: 100px;
 	margin-bottom: 20px
 }
-
-.banner-title {text-align: center}
 
 /* main container (all pages) */
 
