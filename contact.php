@@ -78,11 +78,7 @@
 			</section>
 			<section class="maps" style="margin-bottom: 0">
 				<span class="subtitle">Nous trouver</span>
-				<span style="font-size: 120%" class="address">
-					3 rue des Colibris,<br>
-					Villeneuve-lès-Maguelone<br>
-					34750
-				</span>
+				<span class="address">3 rue des Colibris, 34750 Villeneuve-lès-Maguelone</span>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.368981082355!2d3.860306515493945!3d43.53634987912545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6b105fc04181b%3A0xab422ac69453757e!2sLa%20Brasserie%20des%20%C3%89v%C3%AAques!5e0!3m2!1sfr!2sfr!4v1617533972849!5m2!1sfr!2sfr" id="map" allowfullscreen="" loading="lazy"></iframe>
 			</section>
 		</main>

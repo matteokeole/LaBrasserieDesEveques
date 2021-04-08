@@ -107,7 +107,9 @@ input[type="submit"]:hover {
 
 .address {
 	display: block;
-	margin-bottom: 20px
+	margin-bottom: 20px;
+	padding: 0 20px;
+	font-size: 26px
 }
 
 #map {

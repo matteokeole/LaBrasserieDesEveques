@@ -141,8 +141,8 @@ main {
 	.card,
 	.interest,
 	.cards,
-	.address,
 	.contact {font-size: 18px}
+	.address {font-size: 22px}
 	.workshop-photo {width: 70%}
 	.card-title {display: none !important}
 	.card-content {

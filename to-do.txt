@@ -1,4 +1,2 @@
-Changements
-- Ajouter du parallaxe à l'image de fond dans index.html (Anouar si tu sais faire, perso jamais fait)
-- Agrandir l'adresse dans contact.php (je vois pas de laquelle il parle)
-- Améliorer les polices (peut-être trouver une police bold ? bref je m'en charge)
+- Parallaxe
+- Fonts
