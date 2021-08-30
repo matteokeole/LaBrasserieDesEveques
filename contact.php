@@ -18,7 +18,7 @@
 		<script type="text/javascript" src="js/toggle_menu.js"></script>
 		<script type="text/javascript">
 			function close_error(btn) {
-				var parent = btn.parentNode;
+				let parent = btn.parentNode;
 				parent.style.animationName = "fade_out";
 				parent.style.opacity = 0;
 				setTimeout(function() {parent.style.display = "none"}, 200)

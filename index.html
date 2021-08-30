@@ -18,7 +18,7 @@
 			function calc_banner_height() {return Math.round(9 * (this.innerWidth / 16))}
 
 			window.onload = function() {
-				var header = document.querySelector("header"),
+				let header = document.querySelector("header"),
 					logo = document.querySelector(".logo"),
 					banner = document.querySelector(".banner"),
 					banner_height = calc_banner_height();
