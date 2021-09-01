@@ -36,12 +36,8 @@ header.top {
 	width: 60px;
 	height: 60px;
 	float: right;
-	background-image: url(../img/menu.svg);
-	background-position: center;
-	background-repeat: no-repeat;
+	background: url(../img/menu.svg) center no-repeat;
 	background-size: 30px;
-	-webkit-filter: invert(1);
-	filter: invert(1);
 	transition-duration: 0.2s
 }
 

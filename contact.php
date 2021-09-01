@@ -8,25 +8,23 @@
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
-		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="apple-touch-icon" href="favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script type="text/javascript" src="js/animate_header.js"></script>
-		<script type="text/javascript" src="js/toggle_menu.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 		<script type="text/javascript">
-			function close_error(btn) {
-				let parent = btn.parentNode;
-				parent.style.animationName = "fade_out";
-				parent.style.opacity = 0;
-				setTimeout(function() {parent.style.display = "none"}, 200)
-			}
-
 			window.onload = function() {
-				animate_header();
-				this.onscroll = animate_header
+				const header = document.querySelector("header"),
+					nav = document.querySelector("nav");
+				// scrolling animation
+				animate_header(header);
+				this.onscroll = function() {animate_header(header)}
+				document.querySelector(".menu").onclick = function() {toggle_menu(this, nav)} // menu toggler
+				if (window.history.replaceState) window.history.replaceState(null, null, window.location.href) // prevents form to re-submit when refreshing
 			}
 		</script>
 		<title>Nous contacter • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
@@ -35,7 +33,7 @@
 	<body>
 		<header>
 			<a href="index.html" class="logo extended" title="La Brasserie des Évêques"></a>
-			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
+			<a href="javascript:void(0)" class="menu" title="Menu"></a>
 			<nav>
 				<a href="index.html" title="Accueil"><span>ACCUEIL</span></a>
 				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
@@ -46,7 +44,7 @@
 
 		<main>
 			<span class="title">Nous contacter</span>
-			<section class="contact" style="border-top: none">
+			<section class="contact">
 				<span class="subtitle">Coordonnées</span>
 				Yannick Bonnet<br>
 				<a href="mailto:yannick.bonnet@free.fr" class="mail" title="Envoyer un mail via Gmail">yannick.bonnet@free.fr</a><br>
@@ -55,11 +53,11 @@
 			<section class="form">
 				<form method="POST">
 					<span class="subtitle">Une question ?</span>
-					<input type="text" name="first_name" placeholder="Prénom (requis)" required>
-					<input type="text" name="last_name" placeholder="Nom (requis)" required><br>
-					<input type="email" name="email" placeholder="E-mail (requis)" required>
-					<input type="tel" name="tel" placeholder="Téléphone (facultatif)"><br>
-					<textarea name="message" placeholder="Message (requis)" required></textarea><br>
+					<input type="text" name="first_name" placeholder="Prénom (requis)"     >
+					<input type="text" name="last_name" placeholder="Nom (requis)"     ><br>
+					<input type="email" name="email" placeholder="E-mail (requis)"     >
+					<input type="tel" name="tel" placeholder="Téléphone (optionnel)"><br>
+					<textarea name="message" placeholder="Message (requis)"     ></textarea><br>
 					<input type="submit" name="submit" value="Envoyer" title="Envoyer">
 				</form>
 				<?php
@@ -67,12 +65,13 @@
 						$msg = $_POST["message"] . "\n" . "Téléphone : " . $_POST["tel"];
 						$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
 						$send = mail(
-							"yannick.bonnet@free.fr",
+							// "yannick.bonnet@free.fr",
+							"legagneuxmatteo34@gmail.com",
 							"La Brasserie des Évêques",
 							$msg,
 							"De " . $from);
-						if ($send) echo "<div class='error valid'><div class='content'>Votre message a bien été envoyé.</div><button class='close' onclick='close_error(this)' title='Fermer'></button></div>";
-						else echo "<div class='error invalid'><div class='content'>Votre message n'a pas pu être envoyé.</div><button class='close' onclick='close_error(this)' title='Fermer'></button></div>";
+						if ($send) echo "<br><div class='error valid'><div class='content'>Votre message a bien été envoyé.</div><button class='close' onclick='close_error(this)' title='Fermer'></button></div>";
+						else echo "<br>div class='error invalid'><div class='content'>Votre message n'a pas pu être envoyé.</div><button class='close' onclick='close_error(this)' title='Fermer'></button></div>";
 					}
 				?>
 			</section>

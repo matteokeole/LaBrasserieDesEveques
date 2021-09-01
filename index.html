@@ -8,24 +8,24 @@
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
-		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="apple-touch-icon" href="favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script type="text/javascript" src="js/toggle_menu.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 		<script type="text/javascript">
-			function calc_banner_height() {return Math.round(9 * (this.innerWidth / 16))}
-
 			window.onload = function() {
-				let header = document.querySelector("header"),
+				const header = document.querySelector("header"),
+					nav = document.querySelector("nav"),
 					logo = document.querySelector(".logo"),
-					banner = document.querySelector(".banner"),
-					banner_height = calc_banner_height();
-
+					banner = document.querySelector(".banner");
+				let banner_height = calc_banner_height();
+				// scrolling animation
 				this.onscroll = function() {
 					banner_height = calc_banner_height();
-					banner.style.top = (this.scrollY / 1.5) + "px";
+					banner.style.top = `${this.scrollY / 1.5} px`;
 					if (this.scrollY < banner_height) {
 						// top of the page
 						header.classList.add("top");
@@ -35,6 +35,7 @@
 						logo.classList.add("extended")
 					}
 				}
+				document.querySelector(".menu").onclick = function() {toggle_menu(this, nav)} // menu toggler
 			}
 		</script>
 		<title>Accueil • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
@@ -43,7 +44,7 @@
 	<body>
 		<header class="top" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)">
 			<a href="" class="logo" title="La Brasserie des Évêques"></a>
-			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
+			<a href="javascript:void(0)" class="menu" title="Menu"></a>
 			<nav>
 				<a href="" class="active" title="Accueil"><span>ACCUEIL</span></a>
 				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>

@@ -22,29 +22,16 @@ body {
 	height: calc(9 * (100vw / 16) - 10px);
 	top: 0;
 	position: absolute;
+	-webkit-animation: fade 0.75s !important;
 	animation: fade 0.75s !important
-}
-
-@keyframes fade {
-	from {opacity: 0}
-	to {opacity: 1}
-}
-
-@keyframes down_fade {
-	from {
-		bottom: 10px;
-		opacity: 0
-	} to {
-		bottom: 0;
-		opacity: 1
-	}
 }
 
 .beer {
 	width: 100px;
 	position: relative;
 	margin-bottom: 20px;
-	animation: down_fade 1s !important;
+	-webkit-animation: down_fade 1s !important;
+	animation: down_fade 1s !important
 }
 
 /* main container (all pages) */
@@ -93,6 +80,41 @@ main {
 }
 
 /* keyframes */
+
+@-webkit-keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@-webkit-keyframes down_fade {
+	from {
+		bottom: 10px;
+		opacity: 0
+	} to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+@keyframes down_fade {
+	from {
+		bottom: 10px;
+		opacity: 0
+	} to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fade_out {
+	from {opacity: 1}
+	to {opacity: 0}
+}
 
 @keyframes fade_out {
 	from {opacity: 1}
@@ -164,24 +186,13 @@ main {
 	.beer {width: 50px}
 	.title {font-size: 35px}
 	.subtitle {font-size: 25px}
-	.links,
-	main > p,
-	.workshop_info,
-	.card,
-	.interest,
-	.cards,
-	.contact {font-size: 18px}
+	.links, main > p, .workshop_info, .card, .interest, .cards, .contact {font-size: 18px}
 	.address {font-size: 22px}
 	.workshop-photo {width: 70%}
 	.card-title {display: none !important}
 	.card-content {
 		visibility: visible !important;
 		opacity: 1 !important
-	}
-	form {
-		display: flex;
-		flex-direction: column;
-		align-items: center
 	}
 	textarea {
 		width: 300px;

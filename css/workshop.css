@@ -1,3 +1,5 @@
+/* workshop section */
+
 .workshop_details {
 	width: 100%;
 	margin: 20px 0;
@@ -41,7 +43,7 @@
 	z-index: 1
 }
 
-.card-title:hover ~ .card-content, .card-content:hover {
+.card-title:hover ~ .card-content, .card-content:hover, .card-title:active ~ .card-content, .card-content:active {
 	visibility: visible;
 	opacity: 1
 }

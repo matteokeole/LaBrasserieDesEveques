@@ -1,4 +1,4 @@
-/* item sections */
+/* items */
 
 .item {
 	display: inline-block;
@@ -18,8 +18,9 @@
 .color {
 	display: block;
 	margin-top: 20px;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #000;
 	font-size: 30px
 }
 

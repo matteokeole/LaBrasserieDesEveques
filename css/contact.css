@@ -1,21 +1,25 @@
-/* containers */
+/* containers & form */
 
 .contact, .form, .maps {
 	width: 100%;
 	margin-bottom: 50px;
-	padding: 20px 0;
-	border-top: 1px solid #757575
+	padding: 20px 0
 }
+
+.form {border-top: 1px solid #757575}
+
+form {display: inline-block}
 
 /* inputs & textarea */
 
 input, textarea {
+	/* removing text fields default appearance */
 	-webkit-appearance: none;
-	border-radius: 0
+	-moz-appearance: none;
+	appearance: none
 }
 
 input:not([type="submit"]) {
-	display: inline-block;
 	width: 300px;
 	margin: 10px 10px 0 10px;
 	padding: 10px;
@@ -27,7 +31,8 @@ input:not([type="submit"]) {
 input:not([type="submit"]):focus, textarea:focus {border-color: #000}
 
 textarea {
-	width: 600px;
+	display: inline-block;
+	width: calc(100% - 42px);
 	height: 200px;
 	margin-top: 30px;
 	padding: 10px;
@@ -37,16 +42,9 @@ textarea {
 	transition-duration: 0.2s
 }
 
-input:invalid, textarea:invalid {
-	box-shadow: none;
-	background-color: rgba(237, 67, 55, 0.2);
-	border: 1px solid #ed4337
-}
-
 /* submit button */
 
 input[type="submit"] {
-	display: inline-block;
 	width: 200px;
 	margin-top: 30px;
 	height: 40px;
@@ -70,11 +68,11 @@ input[type="submit"]:hover {
 	opacity: 1;
 	color: #fff;
 	font-size: 18px;
+	-webkit-animation-duration: 0.2s;
 	animation-duration: 0.2s
 }
 
 .error.valid {background-color: #77b255}
-
 .error.invalid {background-color: #ed4337}
 
 .error .content {
@@ -92,7 +90,7 @@ input[type="submit"]:hover {
 	height: 40px;
 	float: right;
 	border: none;
-	background: url(../img/cross.svg) center no-repeat;
+	background: url(../img/cross-white.svg) center no-repeat;
 	background-size: 20px;
 	cursor: pointer
 }
@@ -102,7 +100,9 @@ input[type="submit"]:hover {
 .maps {
 	display: flex;
 	flex-direction: column;
-	align-items: center
+	align-items: center;
+	width: 100%;
+	border-top: 1px solid #757575
 }
 
 .address {

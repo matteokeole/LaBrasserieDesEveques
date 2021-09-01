@@ -8,18 +8,22 @@
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
-		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="apple-touch-icon" href="favicon.png">
 		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/workshop.css">
-		<script type="text/javascript" src="js/animate_header.js"></script>
-		<script type="text/javascript" src="js/toggle_menu.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 		<script type="text/javascript">
 			window.onload = function() {
-				animate_header();
-				this.onscroll = animate_header
+				const header = document.querySelector("header"),
+					nav = document.querySelector("nav");
+				// scrolling animation
+				animate_header(header);
+				this.onscroll = function() {animate_header(header)}
+				document.querySelector(".menu").onclick = function() {toggle_menu(this, nav)} // menu toggler
 			}
 		</script>
 		<title>Notre atelier • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
@@ -28,7 +32,7 @@
 	<body>
 		<header>
 			<a href="index.html" class="logo extended" title="La Brasserie des Évêques"></a>
-			<a href="javascript:void(0)" class="menu" onclick="toggle_menu(this)" title="Menu"></a>
+			<a href="javascript:void(0)" class="menu" title="Menu"></a>
 			<nav>
 				<a href="index.html" title="Accueil"><span>ACCUEIL</span></a>
 				<a href="produits.html" title="Nos produits"><span>NOS PRODUITS</span></a>
