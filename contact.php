@@ -53,11 +53,11 @@
 			<section class="form">
 				<form method="POST">
 					<span class="subtitle">Une question ?</span>
-					<input type="text" name="first_name" placeholder="Prénom (requis)"     >
-					<input type="text" name="last_name" placeholder="Nom (requis)"     ><br>
-					<input type="email" name="email" placeholder="E-mail (requis)"     >
+					<input type="text" name="first_name" placeholder="Prénom (requis)" required>
+					<input type="text" name="last_name" placeholder="Nom (requis)" required><br>
+					<input type="email" name="email" placeholder="E-mail (requis)" required>
 					<input type="tel" name="tel" placeholder="Téléphone (optionnel)"><br>
-					<textarea name="message" placeholder="Message (requis)"     ></textarea><br>
+					<textarea name="message" placeholder="Message (requis)" required></textarea><br>
 					<input type="submit" name="submit" value="Envoyer" title="Envoyer">
 				</form>
 				<?php
@@ -66,7 +66,6 @@
 						$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
 						$send = mail(
 							// "yannick.bonnet@free.fr",
-							"legagneuxmatteo34@gmail.com",
 							"La Brasserie des Évêques",
 							$msg,
 							"De " . $from);
