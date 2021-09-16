@@ -8,25 +8,13 @@
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
-		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="favicon.png">
-		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/contact.css">
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
 		<script type="text/javascript" src="main.js"></script>
-		<script type="text/javascript">
-			window.onload = function() {
-				const header = document.querySelector("header"),
-					nav = document.querySelector("nav");
-				// scrolling animation
-				animate_header(header);
-				this.onscroll = function() {animate_header(header)}
-				document.querySelector(".menu").onclick = function() {toggle_menu(this, nav)} // menu toggler
-				if (window.history.replaceState) window.history.replaceState(null, null, window.location.href) // prevents form to re-submit when refreshing
-			}
-		</script>
 		<title>Nous contacter • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
@@ -56,7 +44,7 @@
 					<input type="text" name="first_name" placeholder="Prénom (requis)" required>
 					<input type="text" name="last_name" placeholder="Nom (requis)" required><br>
 					<input type="email" name="email" placeholder="E-mail (requis)" required>
-					<input type="tel" name="tel" placeholder="Téléphone (optionnel)"><br>
+					<input type="number" name="tel" placeholder="Téléphone (optionnel)"><br>
 					<textarea name="message" placeholder="Message (requis)" required></textarea><br>
 					<input type="submit" name="submit" value="Envoyer" title="Envoyer">
 				</form>
@@ -90,6 +78,17 @@
 			<span class="copyright">© 2021 La Brasserie des Évêques. Tous droits réservés.</span>
 			<span class="creators">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
 		</footer>
+
+		<script type="text/javascript">
+			const header = document.querySelector("header"),
+			nav = document.querySelector("nav");
+			// scrolling animation
+			animate_header(header);
+			this.addEventListener("scroll", function() {animate_header(header)});
+			// menu toggler
+			document.querySelector(".menu").addEventListener("click", function() {toggle_menu(this, nav)});
+			if (this.history.replaceState) this.history.replaceState(null, null, this.location.href) // prevents form to re-submit when refreshing
+		</script>
 	</body>
 
 </html>

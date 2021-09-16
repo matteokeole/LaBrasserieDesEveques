@@ -8,36 +8,13 @@
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
-		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="favicon.png">
-		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/products.css">
 		<script type="text/javascript" src="main.js"></script>
-		<script type="text/javascript">
-			window.onload = function() {
-				const header = document.querySelector("header"),
-					nav = document.querySelector("nav"),
-					amber = document.querySelector(".amber .photo"),
-					blond = document.querySelector(".blond .photo"),
-					brown = document.querySelector(".brown .photo");
-				// scrolling animation
-				animate_header(header);
-				this.onscroll = function() {animate_header(header)}
-				document.querySelector(".menu").onclick = function() {toggle_menu(this, nav)} // menu toggler
-				// init amber beer photo
-				amber.src = "img/amber-small.jpg";
-				amber.onload = function() {this.src = "img/amber.jpg"}
-				// init blond beer photo
-				blond.src = "img/blond-small.jpg";
-				blond.onload = function() {this.src = "img/blond.jpg"}
-				// init brown beer photo
-				brown.src = "img/brown-small.jpg";
-				brown.onload = function() {this.src = "img/brown.jpg"}
-			}
-		</script>
 		<title>Nos produits • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
@@ -110,6 +87,28 @@
 			<span class="copyright">© 2021 La Brasserie des Évêques. Tous droits réservés.</span>
 			<span class="creators">Conception du site : Anouar Soufyani et Mattéo Legagneux</span>
 		</footer>
+
+		<script type="text/javascript">
+			const header = document.querySelector("header"),
+			nav = document.querySelector("nav"),
+			amber = document.querySelector(".amber .photo"),
+			blond = document.querySelector(".blond .photo"),
+			brown = document.querySelector(".brown .photo");
+			// scrolling animation
+			animate_header(header);
+			this.addEventListener("scroll", function() {animate_header(header)});
+			// menu toggler
+			document.querySelector(".menu").addEventListener("click", function() {toggle_menu(this, nav)});
+			// init amber beer photo
+			amber.src = "img/amber-small.jpg";
+			amber.addEventListener("load", function() {this.src = "img/amber.jpg"});
+			// init blond beer photo
+			blond.src = "img/blond-small.jpg";
+			blond.addEventListener("load", function() {this.src = "img/blond.jpg"});
+			// init brown beer photo
+			brown.src = "img/brown-small.jpg";
+			brown.addEventListener("load", function() {this.src = "img/brown.jpg"})
+		</script>
 	</body>
 
 </html>

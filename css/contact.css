@@ -27,7 +27,6 @@ input:not([type="submit"]) {
 	border: 1px solid #757575;
 	transition-duration: 0.2s
 }
-
 input:not([type="submit"]):focus, textarea:focus {border-color: #000}
 
 textarea {
@@ -54,7 +53,6 @@ input[type="submit"] {
 	cursor: pointer;
 	transition-duration: 0.4s
 }
-
 input[type="submit"]:hover {
 	background-color: #000;
 	color: #fff
@@ -71,10 +69,8 @@ input[type="submit"]:hover {
 	-webkit-animation-duration: 0.2s;
 	animation-duration: 0.2s
 }
-
 .error.valid {background-color: #77b255}
 .error.invalid {background-color: #ed4337}
-
 .error .content {
 	display: inline-block;
 	width: calc(100% - 100px);
@@ -83,7 +79,6 @@ input[type="submit"]:hover {
 	float: left;
 	text-align: left
 }
-
 .error .close {
 	display: inline-block;
 	width: 40px;

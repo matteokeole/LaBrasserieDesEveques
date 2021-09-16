@@ -1,5 +1,4 @@
 /* header */
-
 header {
 	width: 100%;
 	height: 60px;
@@ -8,14 +7,12 @@ header {
 	transition-duration: 0.2s;
 	z-index: 3
 }
-
 header.top {
 	box-shadow: none !important;
 	background-color: transparent
 }
 
 /* logo */
-
 .logo {
 	display: inline-block;
 	width: 37px; /* basic logo = 37px */
@@ -23,14 +20,12 @@ header.top {
 	background: url(../img/logo.png) no-repeat;
 	background-size: contain
 }
-
 .logo.extended {
 	width: 93px; /* extended logo = 93px */
 	background-image: url(../img/logo-extended.png)
 }
 
 /* menu button (only for small screens) */
-
 .menu {
 	visibility: hidden;
 	width: 60px;
@@ -40,11 +35,9 @@ header.top {
 	background-size: 30px;
 	transition-duration: 0.2s
 }
-
 .menu.opened {background-image: url(../img/cross.svg)}
 
 /* nav section */
-
 nav {
 	display: inline-block;
 	height: 60px;
@@ -53,14 +46,12 @@ nav {
 	opacity: 1;
 	transition-duration: 0.2s
 }
-
 nav.opened {
 	visibility: visible;
 	opacity: 1
 }
 
 /* nav links */
-
 nav a {
 	display: inline-block;
 	height: 40px;
@@ -72,8 +63,7 @@ nav a {
 	text-decoration: none;
 	transition-duration: 0.4s
 }
-
-nav .active {
+nav a.active {
 	background-color: #000;
 	color: #fff
 }

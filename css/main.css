@@ -1,3 +1,6 @@
+/* importing font faces */
+@import url(../fonts/fonts.css);
+
 body {
 	margin: 0;
 	overflow-x: hidden
@@ -35,7 +38,6 @@ body {
 }
 
 /* main container (all pages) */
-
 main {
 	display: flex;
 	flex-direction: column;
@@ -51,7 +53,6 @@ main {
 }
 
 /* workshop photo (only index) */
-
 .workshop-photo {
 	width: 40%;
 	margin-top: 20px
@@ -85,7 +86,6 @@ main {
 	from {opacity: 0}
 	to {opacity: 1}
 }
-
 @keyframes fade {
 	from {opacity: 0}
 	to {opacity: 1}
@@ -100,7 +100,6 @@ main {
 		opacity: 1
 	}
 }
-
 @keyframes down_fade {
 	from {
 		bottom: 10px;
@@ -115,7 +114,6 @@ main {
 	from {opacity: 1}
 	to {opacity: 0}
 }
-
 @keyframes fade_out {
 	from {opacity: 1}
 	to {opacity: 0}
@@ -123,6 +121,7 @@ main {
 
 /* media queries */
 
+/* 1401px (min-width) */
 @media screen and (min-width: 1401px) {
 	.card {
 		width: 400px !important;
@@ -131,6 +130,7 @@ main {
 	.card-content {height: calc(100% - 40px) !important}
 }
 
+/* 901px (min-width) */
 @media screen and (min-width: 901px) {
 	/* nav buttons hover animation */
 	nav a:after {
@@ -150,6 +150,7 @@ main {
 	nav a:hover:after {width: 100%}
 }
 
+/* 1000px */
 @media screen and (max-width: 1000px) {
 	.beer {width: 75px}
 	.title {font-size: 45px}
@@ -159,6 +160,7 @@ main {
 	#map {width: 100%}
 }
 
+/* 900px */
 @media screen and (max-width: 900px) {
 	.card {width: 100% !important}
 	.list {width: 100% !important}
@@ -182,6 +184,7 @@ main {
 	}
 }
 
+/* 800px */
 @media screen and (max-width: 800px) {
 	.beer {width: 50px}
 	.title {font-size: 35px}
@@ -207,8 +210,10 @@ main {
 	.workshop-photo {width: 90%}
 }
 
+/* 600px */
 @media screen and (max-width: 600px) {.formula {width: 100% !important}}
 
+/* 500px */
 @media screen and (max-width: 500px) {
 	main {padding: 100px 0 50px 0}
 	.item {margin: 20px 0 !important}
