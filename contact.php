@@ -10,10 +10,8 @@
 		<meta name="copyright" content="© 2021 La Brasserie des Évêques. Tous droits réservés.">
 		<link rel="icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="favicon.png">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/header.css">
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script type="text/javascript" src="main.js"></script>
 		<title>Nous contacter • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
@@ -41,10 +39,10 @@
 			<section class="form">
 				<form method="POST">
 					<span class="subtitle">Une question ?</span>
-					<input type="text" name="first_name" placeholder="Prénom (requis)" required>
-					<input type="text" name="last_name" placeholder="Nom (requis)" required><br>
+					<input type="text" name="first_name" placeholder="Prénom (requis)" required autocomplete="off">
+					<input type="text" name="last_name" placeholder="Nom (requis)" required autocomplete="off"><br>
 					<input type="email" name="email" placeholder="E-mail (requis)" required>
-					<input type="number" name="tel" placeholder="Téléphone (optionnel)"><br>
+					<input type="tel" name="tel" placeholder="Téléphone (optionnel)" autocomplete="off"><br>
 					<textarea name="message" placeholder="Message (requis)" required></textarea><br>
 					<input type="submit" name="submit" value="Envoyer" title="Envoyer">
 				</form>

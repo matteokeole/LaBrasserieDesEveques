@@ -1,5 +1,7 @@
-/* importing font faces */
+/* importing font faces & header/footer styles */
 @import url(../fonts/fonts.css);
+@import url(../css/header.css);
+@import url(../css/footer.css);
 
 body {
 	margin: 0;

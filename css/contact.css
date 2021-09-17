@@ -15,8 +15,7 @@ form {display: inline-block}
 input, textarea {
 	/* removing text fields default appearance */
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none
+	border-radius: 0 /* removing iOS default border radius */
 }
 
 input:not([type="submit"]) {
