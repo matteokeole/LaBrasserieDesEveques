@@ -72,6 +72,7 @@ input[type="submit"]:hover {
 }
 .error.valid {background-color: #77b255}
 .error.invalid {background-color: #ed4337}
+
 .error .content {
 	display: inline-block;
 	width: calc(100% - 100px);
@@ -80,8 +81,12 @@ input[type="submit"]:hover {
 	float: left;
 	text-align: left
 }
-.error .close {
-	display: inline-block;
+
+/* Mail status close button */
+.error .btn-close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 40px;
 	height: 40px;
 	float: right;
@@ -89,6 +94,11 @@ input[type="submit"]:hover {
 	background: url(../assets/images/cross-white.svg) center no-repeat;
 	background-size: 20px;
 	cursor: pointer
+}
+
+.btn-close ion-icon {
+	color: #fff;
+	font-size: 20px
 }
 
 /* Google Maps section */

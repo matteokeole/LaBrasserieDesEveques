@@ -1,16 +1,3 @@
-<?php
-	if (isset($_POST["submit"])) {
-		$msg = $_POST["message"] . "\nTéléphone : " . $_POST["tel"];
-		$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
-		$send = mail(
-			// "yannick.bonnet@free.fr",
-			"La Brasserie des Évêques",
-			$msg,
-			"De " . $from
-		);
-	}
-?>
-
 <!DOCTYPE html>
 
 <html prefix="og: http://ogp.me/ns#" lang="fr">
@@ -60,24 +47,39 @@
 					<input type="submit" name="submit" value="Envoyer" title="Envoyer">
 				</form>
 				<?php
-					if (isset($send) and $send) {
-						echo "<br>
-							<div class='error valid'>
-								<div class='content'>Votre message a bien été envoyé.</div>
-								<button class='close' onclick='closeError(this)' title='Fermer'></button>
-							</div>";
-					} else {
-						echo "<br>
-							<div class='error invalid'>
-								<div class='content'>Votre message n'a pas pu être envoyé.</div>
-								<button class='close' onclick='closeError(this)' title='Fermer'></button>
-							</div>";
+					if (!empty($_POST["submit"])) {
+						$msg = $_POST["message"] . "<br>Téléphone : " . $_POST["tel"];
+						$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
+						$send = mail(
+							// "matteoo34@icloud.com",
+							// "yannick.bonnet@free.fr",
+							"La Brasserie des Évêques",
+							$msg,
+							"De " . $from
+						);
+						if ($send) {
+							echo "<br>
+								<div class='error valid'>
+									<div class='content'>Votre message a bien été envoyé.</div>
+									<button class='btn-close'>
+										<ion-icon name='close-outline'></ion-icon>
+									</button>
+								</div>";
+						} else {
+							echo "<br>
+								<div class='error invalid'>
+									<div class='content'>Votre message n'a pas pu être envoyé.</div>
+									<button class='btn-close'>
+										<ion-icon name='close-outline'></ion-icon>
+									</button>
+								</div>";
+						}
 					}
 				?>
 			</div>
 			<div class="maps" style="margin-bottom: 0">
 				<h2 class="subtitle">Nous trouver</h2>
-				<span class="address">3 rue des Colibris, 34750 Villeneuve-lès-Maguelone</span>
+				<p class="address">3 rue des Colibris, 34750 Villeneuve-lès-Maguelone</p>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.368981082355!2d3.860306515493945!3d43.53634987912545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6b105fc04181b%3A0xab422ac69453757e!2sLa%20Brasserie%20des%20%C3%89v%C3%AAques!5e0!3m2!1sfr!2sfr!4v1617533972849!5m2!1sfr!2sfr" id="map" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 		</main>
@@ -95,8 +97,10 @@
 			this.addEventListener("scroll", function() {animateHeader(header)});
 			// Dropdown menu button
 			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
+			// Mail status close button
+			document.querySelector(".btn-close").addEventListener("click", function() {closeError(this)})
 		</script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 
