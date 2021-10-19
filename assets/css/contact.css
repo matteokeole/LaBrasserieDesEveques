@@ -1,4 +1,4 @@
-/* containers & form */
+/* Containers & form */
 
 .contact, .form, .maps {
 	width: 100%;
@@ -10,12 +10,14 @@
 
 form {display: inline-block}
 
-/* inputs & textarea */
+/* Inputs & textarea */
 
 input, textarea {
-	/* removing text fields default appearance */
+	/* Remove text fields default appearance */
 	-webkit-appearance: none;
-	border-radius: 0 /* removing iOS default border radius */
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0 /* Remove iOS default border radius */
 }
 
 input:not([type="submit"]) {
@@ -40,7 +42,7 @@ textarea {
 	transition-duration: 0.2s
 }
 
-/* submit button */
+/* Submit button */
 
 input[type="submit"] {
 	width: 200px;
@@ -57,7 +59,7 @@ input[type="submit"]:hover {
 	color: #fff
 }
 
-/* mail status message */
+/* Mail status message */
 
 .error {
 	display: inline-block;
@@ -84,7 +86,7 @@ input[type="submit"]:hover {
 	height: 40px;
 	float: right;
 	border: none;
-	background: url(../img/cross-white.svg) center no-repeat;
+	background: url(../assets/images/cross-white.svg) center no-repeat;
 	background-size: 20px;
 	cursor: pointer
 }

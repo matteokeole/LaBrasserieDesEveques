@@ -1,0 +1,34 @@
+/** Footer **/
+
+footer {
+	padding: 10px;
+	position: relative;
+	border-top: 1px solid #757575;
+	background-color: #fff;
+	text-align: center
+}
+
+/* Useful links */
+
+.links {line-height: 40px}
+
+.links a {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	padding: 0 20px
+}
+
+.fb {
+	height: 40px;
+	padding: 0 !important;
+	color: #000
+}
+
+.fb ion-icon {font-size: 40px}
+
+/* Copyright section */
+.copyright {
+	display: block;
+	padding-top: 10px
+}

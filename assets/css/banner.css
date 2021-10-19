@@ -1,0 +1,30 @@
+/** Banner section **/
+
+.banner-container {position: relative}
+
+.banner-container img {
+	display: block;
+	width: 100%
+}
+
+.banner-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	position: absolute;
+	-webkit-animation: fadeIn 0.75s;
+	animation: fadeIn 0.75s
+}
+
+.beer {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	position: relative;
+	font-size: 80px;
+	-webkit-animation: fadeDown 1s;
+	animation: fadeDown 1s
+}
