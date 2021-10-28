@@ -1,62 +1,13 @@
-/* Containers & form */
+/** Contact page **/
 
-.contact, .form, .maps {
+/* CSS imports */
+@import url("form.css");
+@import url("map.css");
+
+.contact-container {
 	width: 100%;
 	margin-bottom: 50px;
 	padding: 20px 0
-}
-
-.form {border-top: 1px solid #757575}
-
-form {display: inline-block}
-
-/* Inputs & textarea */
-
-input, textarea {
-	/* Remove text fields default appearance */
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border-radius: 0 /* Remove iOS default border radius */
-}
-
-input:not([type="submit"]) {
-	width: 300px;
-	margin: 10px 10px 0 10px;
-	padding: 10px;
-	outline: none;
-	border: 1px solid #757575;
-	transition-duration: 0.2s
-}
-input:not([type="submit"]):focus, textarea:focus {border-color: #000}
-
-textarea {
-	display: inline-block;
-	width: calc(100% - 42px);
-	height: 200px;
-	margin-top: 30px;
-	padding: 10px;
-	outline: none;
-	border: 1px solid #757575;
-	resize: none;
-	transition-duration: 0.2s
-}
-
-/* Submit button */
-
-input[type="submit"] {
-	width: 200px;
-	margin-top: 30px;
-	height: 40px;
-	padding: 0 20px;
-	border: 1px solid #000;
-	background-color: inherit;
-	cursor: pointer;
-	transition-duration: 0.4s
-}
-input[type="submit"]:hover {
-	background-color: #000;
-	color: #fff
 }
 
 /* Mail status message */
@@ -89,37 +40,13 @@ input[type="submit"]:hover {
 	align-items: center;
 	width: 40px;
 	height: 40px;
-	float: right;
 	border: none;
-	background: url(../assets/images/cross-white.svg) center no-repeat;
-	background-size: 20px;
+	background-color: transparent;
 	cursor: pointer
 }
+.error .btn-close:hover {opacity: 0.5}
 
 .btn-close ion-icon {
 	color: #fff;
 	font-size: 20px
-}
-
-/* Google Maps section */
-
-.maps {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	border-top: 1px solid #757575
-}
-
-.address {
-	display: block;
-	margin-bottom: 20px;
-	padding: 0 20px;
-	font-size: 26px
-}
-
-#map {
-	width: 80%;
-	height: 400px;
-	border: 1px solid #757575
 }

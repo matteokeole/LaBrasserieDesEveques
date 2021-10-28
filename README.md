@@ -1,5 +1,5 @@
 # La Brasserie des Évêques
 Site officiel de la Brasserie des Évêques à Villeneuve-lès-Maguelone.  
-Made by Anouar Soufyani and Mattéo Legagneux.  
-Copyright (C 2021. All rights reserved.  
+Créé par Anouar Soufyani et Mattéo Legagneux.  
+Copyright (C) 2021. Tous droits réservés.  
 https://brasseriedeseveques.000webhostapp.com

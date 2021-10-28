@@ -1,4 +1,4 @@
-/** Products **/
+/** Products page **/
 
 .item {
 	display: inline-block;
@@ -12,7 +12,8 @@
 
 .photo {
 	width: 100%;
-	transition-duration: 0.4s
+	background: url(../images/loading.gif) center no-repeat;
+	background-size: 10%
 }
 
 .color {

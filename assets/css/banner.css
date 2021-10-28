@@ -1,4 +1,4 @@
-/** Banner section **/
+/** Banner **/
 
 .banner-container {position: relative}
 
@@ -7,6 +7,7 @@
 	width: 100%
 }
 
+/* Titles */
 .banner-title {
 	display: flex;
 	flex-direction: column;
@@ -15,10 +16,12 @@
 	width: 100%;
 	top: 0;
 	position: absolute;
+	background-color: red;
 	-webkit-animation: fadeIn 0.75s;
 	animation: fadeIn 0.75s
 }
 
+/* Beer icon */
 .beer {
 	width: 100px;
 	height: 100px;

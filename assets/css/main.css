@@ -1,13 +1,15 @@
+/** Main styles **/
+
+/* CSS imports */
 @import url(../fonts/fonts.css);
-@import url(../css/header.css);
-@import url(../css/footer.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(keyframes.css);
 
 body {
 	margin: 0;
 	overflow-x: hidden
 }
-
-ion-icon {display: inline-block}
 
 /* Main container (all pages) */
 main {
@@ -50,48 +52,6 @@ main {
 	color: #000;
 	text-decoration: none;
 	transition-duration: 0.4s
-}
-
-/* Keyframes */
-
-/* Fade in */
-@-webkit-keyframes fadeIn {
-	from {opacity: 0}
-	to {opacity: 1}
-}
-@keyframes fadeIn {
-	from {opacity: 0}
-	to {opacity: 1}
-}
-
-/* Fade out */
-@-webkit-keyframes fadeOut {
-	from {opacity: 1}
-	to {opacity: 0}
-}
-@keyframes fadeOut {
-	from {opacity: 1}
-	to {opacity: 0}
-}
-
-/* Fade in (beer icon) */
-@-webkit-keyframes fadeDown {
-	from {
-		bottom: 10px;
-		opacity: 0
-	} to {
-		bottom: 0;
-		opacity: 1
-	}
-}
-@keyframes fadeDown {
-	from {
-		bottom: 10px;
-		opacity: 0
-	} to {
-		bottom: 0;
-		opacity: 1
-	}
 }
 
 /* Media queries */

@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
-		<meta name="keywords" content="yannick, bonnet, brasserie, évêques, villeneuve, maguelone, villeneuve-lès-maguelone, bière, anouar, soufyani, mattéo, legagneux">
+		<meta name="keywords" content="brasserie, évêques, yannick, bonnet, villeneuve, maguelone, villeneuve-lès-maguelone, bière, anouar, soufyani, mattéo, legagneux">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta property="og:type" content="website">
@@ -18,15 +18,18 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="assets/css/workshop.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-		<script src="assets/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/workshop.css">
+		<!-- Ionicons -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		<title>Notre atelier • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
 	<body>
 		<!-- Header include -->
 		<?php include "includes/header.php"; ?>
+
 		<!-- Content -->
 		<main>
 			<span class="title">Notre atelier</span>
@@ -34,7 +37,7 @@
 				Faites vous-même votre bière !<br>
 				Nous proposons un atelier d'initiation au brassage.
 			</p>
-			<section class="workshop_details">
+			<div class="workshop-details">
 				<div class="card program">
 					<div class="card-title">Programme</div>
 					<div class="card-content">
@@ -80,36 +83,36 @@
 					<div class="card-content">
 						<span class="subtitle">Formules</span>
 						<div class="formula" style="float: left">
-							<span><u>Pour 2 personnes</u></span><br><br>
-							<span class="price">158€</span>
+							<span><u>Pour 2 personnes</u></span><br>
+							<span class="price">158€</span><br>
 						</div>
 						<div class="formula" style="float: right">
-							<span><u>Pour 3 personnes</u></span><br><br>
+							<span><u>Pour 3 personnes</u></span><br>
 							<span class="price">198€</span>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="interest">
+			</div>
+			<div class="interest">
 				<p>Vous êtes intéressé(e) ?</p>
 				<a href="contact.php" class="btn-contact">CONTACTEZ-NOUS</a>
-			</section>
+			</div>
 		</main>
+
 		<!-- Footer include -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
+		<script src="assets/main.js"></script>
 		<script>
 			const header = document.querySelector("header"),
 			nav = document.querySelector("nav");
-			// scrolling animation
+			// Animation on scroll
 			animateHeader(header);
-			this.addEventListener("scroll", function() {animateHeader(header)});
-			// menu toggler
-			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)})
+			addEventListener("scroll", function() {animateHeader(header)});
+			// Dropdown menu button
+			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
 		</script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 
 </html>

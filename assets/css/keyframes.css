@@ -1,0 +1,44 @@
+/** Keyframes **/
+
+/* Fade in (banner titles) */
+
+@-webkit-keyframes fadeIn {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+@keyframes fadeIn {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+/* Fade in (beer icons) */
+
+@-webkit-keyframes fadeDown {
+	from {
+		bottom: 10px;
+		opacity: 0
+	} to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+@keyframes fadeDown {
+	from {
+		bottom: 10px;
+		opacity: 0
+	} to {
+		bottom: 0;
+		opacity: 1
+	}
+}
+
+/* Fade out (form confirmation) */
+
+@-webkit-keyframes fadeOut {
+	from {opacity: 1}
+	to {opacity: 0}
+}
+@keyframes fadeOut {
+	from {opacity: 1}
+	to {opacity: 0}
+}

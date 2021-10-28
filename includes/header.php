@@ -10,7 +10,6 @@
 	else if (strpos($url, "atelier")) $workshop = "active";
 	else if (strpos($url, "contact")) $contact = "active";
 ?>
-<!-- Header -->
 <header class="top">
 	<!-- Logo -->
 	<a href="index.php" class="logo" title="La Brasserie des Évêques"></a>

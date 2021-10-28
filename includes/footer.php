@@ -1,4 +1,3 @@
-<!-- Footer -->
 <footer>
 	<!-- Footer links -->
 	<div class="links">

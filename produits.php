@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
-		<meta name="keywords" content="yannick, bonnet, brasserie, évêques, villeneuve, maguelone, villeneuve-lès-maguelone, bière, anouar, soufyani, mattéo, legagneux">
+		<meta name="keywords" content="brasserie, évêques, yannick, bonnet, villeneuve, maguelone, villeneuve-lès-maguelone, bière, anouar, soufyani, mattéo, legagneux">
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta property="og:type" content="website">
@@ -20,20 +20,23 @@
 		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="assets/css/products.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-		<script src="assets/main.js"></script>
+		<!-- Ionicons -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		<title>Nos produits • La Brasserie des Évêques • Villeneuve-lès-Maguelone</title>
 	</head>
 
 	<body>
 		<!-- Header include -->
 		<?php include "includes/header.php"; ?>
+
 		<!-- Content -->
 		<main>
 			<span class="title">Nos bières</span>
 			<section class="products">
 				<div class="item amber">
 					<img class="photo">
-					<span class="subtitle color">AMBREE</span>
+					<span class="subtitle color">AMBRÉE</span>
 					<ul class="info">
 						<li>33 cl et 75 cl</li>
 						<li>Alcool : 6,0% Vol</li>
@@ -75,33 +78,34 @@
 				</div>
 			</section>
 		</main>
+
 		<!-- Footer include -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
+		<script src="assets/main.js"></script>
 		<script>
 			const header = document.querySelector("header"),
 			nav = document.querySelector("nav"),
 			amber = document.querySelector(".amber .photo"),
 			blond = document.querySelector(".blond .photo"),
-			brown = document.querySelector(".brown .photo");
-			// scrolling animation
+			brown = document.querySelector(".brown .photo"),
+			amberLoad = new Image(),
+			blondLoad = new Image(),
+			brownLoad = new Image();
+			// Scroll animation
 			animateHeader(header);
-			this.addEventListener("scroll", function() {animateHeader(header)});
-			// menu toggler
+			addEventListener("scroll", function() {animateHeader(header)});
+			// Menu toggler
 			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
-			// init amber beer photo
-			amber.src = "img/amber-small.jpg";
-			amber.addEventListener("load", function() {this.src = "img/amber.jpg"});
-			// init blond beer photo
-			blond.src = "img/blond-small.jpg";
-			blond.addEventListener("load", function() {this.src = "img/blond.jpg"});
-			// init brown beer photo
-			brown.src = "img/brown-small.jpg";
-			brown.addEventListener("load", function() {this.src = "img/brown.jpg"})
+			// Load images
+			amberLoad.addEventListener("load", function() {amber.src = this.src});
+			blondLoad.addEventListener("load", function() {blond.src = this.src});
+			brownLoad.addEventListener("load", function() {brown.src = this.src});
+			amberLoad.src = "assets/images/amber.jpg";
+			blondLoad.src = "assets/images/blond.jpg";
+			brownLoad.src = "assets/images/brown.jpg"
 		</script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 
 </html>
