@@ -81,7 +81,7 @@
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
-		<script src="assets/main.js"></script>
+		<script src="assets/js/main.js"></script>
 		<script>
 			const logo = document.querySelector(".logo"),
 			banner = document.querySelector(".banner-container"),

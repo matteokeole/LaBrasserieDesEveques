@@ -96,7 +96,7 @@
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
-		<script src="assets/main.js"></script>
+		<script src="assets/js/main.js"></script>
 		<script>
 			// Prevent form to re-submit when refreshing
 			if (this.history.replaceState) this.history.replaceState(null, null, this.location.href);

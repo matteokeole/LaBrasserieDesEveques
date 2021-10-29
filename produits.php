@@ -83,7 +83,7 @@
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
-		<script src="assets/main.js"></script>
+		<script src="assets/js/main.js"></script>
 		<script>
 			const amber = document.querySelector(".amber .photo"),
 			blond = document.querySelector(".blond .photo"),
