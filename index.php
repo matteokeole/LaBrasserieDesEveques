@@ -21,7 +21,7 @@
 		<meta property="og:site_name" content="La Brasserie des Évêques">
 		<meta property="og:title" content="Accueil • La Brasserie des Évêques • Villeneuve-lès-Maguelone">
 		<meta property="og:description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
-		<meta property="og:image" content="assets/images/logo-extended.png">
+		<meta property="og:image" content="https://brasseriedeseveques.000webhostapp.com/assets/images/logo-extended.png">
 		<meta name="twitter:card" content="summary_large_image">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">

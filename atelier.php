@@ -10,11 +10,11 @@
 		<meta name="author" content="Anouar Soufyani, Mattéo Legagneux">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://brasseriedeseveques.000webhostapp.com">
+		<meta property="og:url" content="https://brasseriedeseveques.000webhostapp.com/atelier.html">
 		<meta property="og:site_name" content="La Brasserie des Évêques">
-		<meta property="og:title" content="Accueil • La Brasserie des Évêques • Villeneuve-lès-Maguelone">
+		<meta property="og:title" content="Faites votre bière • La Brasserie des Évêques • Villeneuve-lès-Maguelone">
 		<meta property="og:description" content="La Brasserie des Évêques à Villeneuve-lès-Maguelone">
-		<meta property="og:image" content="assets/images/logo-extended.png">
+		<meta property="og:image" content="https://brasseriedeseveques.000webhostapp.com/assets/images/logo-extended.png">
 		<meta name="twitter:card" content="summary_large_image">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">

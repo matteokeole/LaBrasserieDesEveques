@@ -11,9 +11,12 @@
 }
 
 .photo {
+	display: block;
 	width: 100%;
+	min-height: 100px;
 	background: url(../images/loading.gif) center no-repeat;
-	background-size: 10%
+	background-size: 10%;
+	color: transparent
 }
 
 .color {
