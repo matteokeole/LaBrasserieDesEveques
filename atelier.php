@@ -20,6 +20,9 @@
 		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/workshop.css">
+		<style>
+			main p:first-of-type {width: 100%}
+		</style>
 		<!-- Ionicons -->
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -27,13 +30,13 @@
 	</head>
 
 	<body>
-		<!-- Header include -->
+		<!-- Header -->
 		<?php include "includes/header.php"; ?>
 
 		<!-- Content -->
 		<main>
 			<span class="title">Notre atelier</span>
-			<p style="width: 100%">
+			<p>
 				Faites vous-même votre bière !<br>
 				Nous proposons un atelier d'initiation au brassage.
 			</p>
@@ -42,7 +45,7 @@
 					<div class="card-title">Programme</div>
 					<div class="card-content">
 						<span class="subtitle">Programme</span>
-						<div class="list" style="float: left">
+						<div class="list">
 							<span><u>La théorie</u></span>
 							<ul>
 								<li>Présentation de la brasserie</li>
@@ -51,7 +54,7 @@
 								<li>L'hygiène</li>
 							</ul>
 						</div>
-						<div class="list" style="float: right">
+						<div class="list">
 							<span><u>La pratique</u></span>
 							<ul>
 								<li>Broyage des malts</li>
@@ -99,14 +102,12 @@
 			</div>
 		</main>
 
-		<!-- Footer include -->
+		<!-- Footer -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
 		<script src="assets/main.js"></script>
 		<script>
-			const header = document.querySelector("header"),
-			nav = document.querySelector("nav");
 			// Animation on scroll
 			animateHeader(header);
 			addEventListener("scroll", function() {animateHeader(header)});

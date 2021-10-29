@@ -38,7 +38,7 @@
 	</head>
 
 	<body>
-		<!-- Header include -->
+		<!-- Header -->
 		<?php include "includes/header.php"; ?>
 
 		<!-- Banner -->
@@ -77,7 +77,7 @@
 			<img src="assets/images/workshop.jpg" alt="Notre atelier" class="workshop-photo">
 		</main>
 
-		<!-- Footer include -->
+		<!-- Footer -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->

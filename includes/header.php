@@ -1,5 +1,5 @@
 <?php
-	// Change the active link in the navbar
+	// Set navbar active link
 	$url = $_SERVER["REQUEST_URI"];
 	$home = "";
 	$products = "";
@@ -13,7 +13,7 @@
 <header class="top">
 	<!-- Logo -->
 	<a href="index.php" class="logo" title="La Brasserie des Évêques"></a>
-	<!-- Dropdown menu toggler -->
+	<!-- Dropdown menu button -->
 	<a href="javascript:void(0)" class="menu" title="Menu">
 		<ion-icon name="menu-outline" class="menu-open"></ion-icon>
 		<ion-icon name="close-outline" class="menu-close"></ion-icon>

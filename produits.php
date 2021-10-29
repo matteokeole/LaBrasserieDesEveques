@@ -27,7 +27,7 @@
 	</head>
 
 	<body>
-		<!-- Header include -->
+		<!-- Header -->
 		<?php include "includes/header.php"; ?>
 
 		<!-- Content -->
@@ -79,15 +79,13 @@
 			</section>
 		</main>
 
-		<!-- Footer include -->
+		<!-- Footer -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
 		<script src="assets/main.js"></script>
 		<script>
-			const header = document.querySelector("header"),
-			nav = document.querySelector("nav"),
-			amber = document.querySelector(".amber .photo"),
+			const amber = document.querySelector(".amber .photo"),
 			blond = document.querySelector(".blond .photo"),
 			brown = document.querySelector(".brown .photo"),
 			amberLoad = new Image(),

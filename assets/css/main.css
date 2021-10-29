@@ -18,7 +18,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	padding: 100px 50px 50px 50px;
 	box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.5);
 	background-color: #fff;

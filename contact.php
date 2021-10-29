@@ -28,7 +28,7 @@
 	</head>
 
 	<body>
-		<!-- Header include -->
+		<!-- Header -->
 		<?php include "includes/header.php"; ?>
 
 		<!-- Content -->
@@ -92,7 +92,7 @@
 			</div>
 		</main>
 
-		<!-- Footer include -->
+		<!-- Footer -->
 		<?php include "includes/footer.php"; ?>
 
 		<!-- Scripts -->
@@ -100,15 +100,13 @@
 		<script>
 			// Prevent form to re-submit when refreshing
 			if (this.history.replaceState) this.history.replaceState(null, null, this.location.href);
-			const header = document.querySelector("header"),
-			nav = document.querySelector("nav"),
-			confirmationCloseBtn = document.querySelector(".error .btn-close");
 			// Animation on scroll
 			animateHeader(header);
 			addEventListener("scroll", function() {animateHeader(header)});
 			// Dropdown menu button
 			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
 			// Mail status close button
+			const confirmationCloseBtn = document.querySelector(".error .btn-close");
 			if (confirmationCloseBtn) confirmationCloseBtn.addEventListener("click", function() {closeError(this)})
 		</script>
 	</body>

@@ -23,8 +23,8 @@ animateHeader = function(header) {
 closeError = function(btn) {
 	// Close form submit confirmation
 	const parent = btn.parentNode;
+	parent.style.opacity = 0;
 	parent.style["-webkit-animation-name"] = "fadeOut";
 	parent.style.animationName = "fadeOut";
-	parent.style.opacity = 0;
 	setTimeout(function() {parent.style.display = "none"}, 200)
 }
