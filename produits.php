@@ -91,11 +91,6 @@
 			amberLoad = new Image(),
 			blondLoad = new Image(),
 			brownLoad = new Image();
-			// Scroll animation
-			animateHeader(header);
-			addEventListener("scroll", function() {animateHeader(header)});
-			// Menu toggler
-			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
 			// Load images
 			amberLoad.addEventListener("load", function() {amber.src = this.src});
 			blondLoad.addEventListener("load", function() {blond.src = this.src});

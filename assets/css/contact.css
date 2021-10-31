@@ -15,14 +15,22 @@
 .error {
 	display: inline-block;
 	margin-top: 30px;
+	outline: 2px solid;
+	outline-offset: 2px;
 	opacity: 1;
 	color: #fff;
 	font-size: 18px;
 	-webkit-animation-duration: 0.2s;
 	animation-duration: 0.2s
 }
-.error.valid {background-color: #77b255}
-.error.invalid {background-color: #ed4337}
+.error.valid {
+	outline-color: var(--mail-okay);
+	background-color: var(--mail-okay)
+}
+.error.invalid {
+	outline-color: var(--mail-error);
+	background-color: var(--mail-error)
+}
 
 .error .content {
 	display: inline-block;

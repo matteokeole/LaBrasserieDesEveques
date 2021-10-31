@@ -44,35 +44,36 @@
 				<form method="POST">
 					<h2 class="subtitle">Une question ?</h2>
 					<span class="required-fields">Les champs marqués d'un * sont obligatoires.</span><br>
-					<input type="text" name="first_name" placeholder="Prénom *" required autocomplete="off">
-					<input type="text" name="last_name" placeholder="Nom *" required autocomplete="off"><br>
-					<input type="email" name="email" placeholder="E-mail *" required>
+					<input type="text" name="first_name" placeholder="Prénom *" autocomplete="off">
+					<input type="text" name="last_name" placeholder="Nom *" autocomplete="off"><br>
+					<input type="email" name="email" placeholder="E-mail *">
 					<input type="tel" name="tel" placeholder="Téléphone" autocomplete="off"><br>
 					<textarea name="message" placeholder="Votre message..."></textarea><br>
 					<input type="submit" name="submit" value="Envoyer">
-				</form>
+				</form><br>
 				<?php
 					if (!empty($_POST["submit"])) {
-						$msg = $_POST["message"] . "<br>Téléphone : " . $_POST["tel"];
+						$msg = $_POST["message"] . "\nTéléphone : " . $_POST["tel"];
 						$from = $_POST["first_name"] . " " . $_POST["last_name"] . " (" . $_POST["email"] . ")";
+						$headers = "From: " . $_POST["email"] . "\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=ISO-8859-1\r\nX-Priority: 1";
 						$send = mail(
-							"matteoo34@icloud.com",
+							"legagneuxmatteo34@gmail.com",
 							// "yannick.bonnet@free.fr",
 							"La Brasserie des Évêques",
 							$msg,
-							"De " . $from
+							$headers
 						);
 						if ($send) {
-							echo "<br>
-								<div class='error valid'>
+							// Mail sent successfully
+							echo "<div class='error valid'>
 									<div class='content'>Votre message a bien été envoyé.</div>
 									<button class='btn-close'>
 										<ion-icon name='close-outline'></ion-icon>
 									</button>
 								</div>";
 						} else {
-							echo "<br>
-								<div class='error invalid'>
+							// Error when trying to send mail
+							echo "<div class='error invalid'>
 									<div class='content'>Votre message n'a pas pu être envoyé.</div>
 									<button class='btn-close'>
 										<ion-icon name='close-outline'></ion-icon>
@@ -100,14 +101,17 @@
 		<script>
 			// Prevent form to re-submit when refreshing
 			if (this.history.replaceState) this.history.replaceState(null, null, this.location.href);
-			// Animation on scroll
-			animateHeader(header);
-			addEventListener("scroll", function() {animateHeader(header)});
-			// Dropdown menu button
-			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
+			const mailCloseBtn = document.querySelector(".error .btn-close"),
+			closeError = function(btn) {
+				// Close email confirmation
+				const parent = btn.parentNode;
+				parent.style.opacity = 0;
+				parent.style["-webkit-animation-name"] = "fadeOut";
+				parent.style.animationName = "fadeOut";
+				setTimeout(function() {parent.style.display = "none"}, 200)
+			};
 			// Mail status close button
-			const confirmationCloseBtn = document.querySelector(".error .btn-close");
-			if (confirmationCloseBtn) confirmationCloseBtn.addEventListener("click", function() {closeError(this)})
+			if (mailCloseBtn) mailCloseBtn.addEventListener("click", function() {closeError(this)})
 		</script>
 	</body>
 

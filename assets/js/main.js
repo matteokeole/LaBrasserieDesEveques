@@ -1,8 +1,10 @@
 const header = document.querySelector("header"),
 nav = document.querySelector("nav"),
-toggleMenu = function(menu, nav) {
+menu = document.querySelector(".menu"),
+toggleMenu = function() {
 	// Show/hide dropdown menu (small screens)
 	if (!menu.classList.contains("opened")) {
+		// Closed menu
 		menu.classList.add("opened");
 		nav.classList.add("opened")
 	} else {
@@ -10,21 +12,15 @@ toggleMenu = function(menu, nav) {
 		nav.classList.remove("opened")
 	}
 },
-animateHeader = function(header) {
-	// Change header background-color & box-shadow depending on the page scroll
-	if (window.scrollY === 0) {
-		// The top is reached
-		header.classList.add("top")
-	} else {
-		// The top isn't reached
-		header.classList.remove("top")
-	}
-},
-closeError = function(btn) {
-	// Close form submit confirmation
-	const parent = btn.parentNode;
-	parent.style.opacity = 0;
-	parent.style["-webkit-animation-name"] = "fadeOut";
-	parent.style.animationName = "fadeOut";
-	setTimeout(function() {parent.style.display = "none"}, 200)
-}
+animateHeader = function() {
+	// Change header background-color & box-shadow depending on how much the user has scrolled
+	if (window.scrollY === 0) header.classList.add("top"); // Top reached
+	else header.classList.remove("top")
+};
+
+// Event listeners
+// Dropdown menu button
+menu.addEventListener("click", toggleMenu);
+// Animation on scroll
+animateHeader();
+addEventListener("scroll", animateHeader)

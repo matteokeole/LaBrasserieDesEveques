@@ -107,13 +107,6 @@
 
 		<!-- Scripts -->
 		<script src="assets/js/main.js"></script>
-		<script>
-			// Animation on scroll
-			animateHeader(header);
-			addEventListener("scroll", function() {animateHeader(header)});
-			// Dropdown menu button
-			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)});
-		</script>
 	</body>
 
 </html>

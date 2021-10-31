@@ -67,11 +67,15 @@
 			</p>
 			<p>
 				<span class="subtitle">Nos produits</span>
-				Nous proposons des bières ambrées, blondes et brunes en vente à emporter,<br>tous les jours de 18h à 19h et le samedi de 10h à 19h.<br><a href="produits.php">Voir les produits</a>
+				Nous proposons des bières ambrées, blondes et brunes en vente à emporter,<br>
+				tous les jours de <u>18h à 19h</u> et le samedi de <u>10h à 19h</u>.<br>
+				<a href="produits.php">Voir les produits</a>
 			</p>
 			<p>
 				<span class="subtitle">Faites votre bière</span>
-				Envie de faire vous-même votre bière ?<br>Participez à un atelier de brassage pour vous initier à l'élaboration d'une bière artisanale.<br><a href="atelier.php">En savoir plus</a>
+				Envie de faire vous-même votre bière ?<br>
+				Participez à un atelier de brassage pour vous initier à l'élaboration d'une bière artisanale.<br>
+				<a href="atelier.php">En savoir plus</a>
 			</p>
 			<p><a href="contact.php" class="btn-contact">CONTACTEZ-NOUS</a></p>
 			<img src="assets/images/workshop.jpg" alt="Notre atelier" class="workshop-photo">
@@ -108,9 +112,7 @@
 				animation()
 			});
 			// Animation on scroll
-			addEventListener("scroll", animation);
-			// Dropdown menu button
-			document.querySelector(".menu").addEventListener("click", function() {toggleMenu(this, nav)})
+			addEventListener("scroll", animation)
 		</script>
 	</body>
 

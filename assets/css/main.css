@@ -6,6 +6,12 @@
 @import url(footer.css);
 @import url(keyframes.css);
 
+/* Color variables */
+:root {
+	--mail-okay: #77b255; /* Light green */
+	--mail-error: #ed4337; /* Light red */
+}
+
 body {
 	margin: 0;
 	overflow-x: hidden
